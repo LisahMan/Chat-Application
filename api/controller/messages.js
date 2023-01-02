@@ -3,7 +3,6 @@ const Message = require('../models/message');
 
 exports.fix_value = () => {
 	const a = 10;
-	a = 100;
 };
 
 exports.create_message = (sendby, sendto, content) => {
