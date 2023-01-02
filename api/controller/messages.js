@@ -2,9 +2,6 @@ const mongoose = require('mongoose');
 const Message = require('../models/message');
 
 exports.create_message = (sendby, sendto, content) => {
-	const a = 10 / 0;
-	const b = 10;
-	b = 20;
 	return new Promise((resolve, reject) => {
 		const message = new Message({
 			_id: new mongoose.Types.ObjectId(),
@@ -24,8 +21,8 @@ exports.create_message = (sendby, sendto, content) => {
 	});
 };
 
-const functionss = async () => {
-	return a;
+const functionasdasasdasasss = async () => {
+	return 10;
 };
 
 exports.get_user_messages = (sendby, sendto) => {
