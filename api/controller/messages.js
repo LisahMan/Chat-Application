@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Message = require('../models/message');
 
 exports.fix_value = () => {
-	console.log('this will fix the bug');
+	const a = 10;
+	a = 100;
 };
 
 exports.create_message = (sendby, sendto, content) => {
