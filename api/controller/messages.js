@@ -21,12 +21,7 @@ exports.create_message = (sendby, sendto, content) => {
 	});
 };
 
-const functionasdasasdasasss = async () => {
-	return 10;
-};
-
 exports.get_user_messages = (sendby, sendto) => {
-	const b = functionss();
 	return new Promise((resolve, reject) => {
 		Message.find({
 			$or: [
