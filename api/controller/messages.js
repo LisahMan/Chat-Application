@@ -1,22 +1,20 @@
 const mongoose = require('mongoose');
 const Message = require('../models/message');
 
-exports.fix_value = () => {
-	const a = 10;
-};
+exports.fix_value = () => {};
 
 exports.create_message = (sendby, sendto, content) => {
 	return new Promise((resolve, reject) => {
 		const message = new Message({
 			_id: new mongoose.Types.ObjectId(),
-			sendby: sendby,
-			sendto: sendto,
-			content: content,
+			sendby,
+			sendto,
+			content,
 		});
 
 		message
 			.save()
-			.then((result) => {
+			.then(() => {
 				resolve('Ok');
 			})
 			.catch((error) => {
@@ -29,7 +27,7 @@ exports.get_user_messages = (sendby, sendto) => {
 	return new Promise((resolve, reject) => {
 		Message.find({
 			$or: [
-				{ sendby: sendby, sendto: sendto },
+				{ sendby, sendto },
 				{ sendby: sendto, sendto: sendby },
 			],
 		})
