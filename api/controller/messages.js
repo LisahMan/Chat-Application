@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Message = require('../models/message');
 
-exports.fix_value = () => {};
-
 exports.create_message = (sendby, sendto, content) => {
 	return new Promise((resolve, reject) => {
 		const message = new Message({
